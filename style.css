@@ -1,0 +1,159 @@
+:root{
+    /*Primary colors*/
+--DarkCyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+
+/*Neutral*/
+--VeryDarkBlue: hsl(212, 21%, 14%);
+--DarkGrayishBlue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+
+--fon1Serat: 'Montserrat', sans-serif;
+--fon2Fraunces: 'Fraunces', serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.container{
+    background-color: var(--Cream);
+    background-size: cover;
+    background-position: cover;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+main{
+    display: flex;
+    width: 30rem;
+    min-height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.9rem;
+}
+
+.image{
+    width: 40rem;
+    min-height: auto;
+    background-image: url(./product-preview-card-component-main/images/image-product-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.text{
+    background-color: var(--White);
+    width: 40rem;
+    padding: 30px;
+}
+
+.descript h5{
+    text-transform: uppercase;
+    font-family: var(--fon1Serat) ;
+    color: var(--DarkGrayishBlue);
+    letter-spacing: 0.3rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.descript h1{
+    font-family: var(--fon2Fraunces);
+    color: var(--VeryDarkBlue);
+}
+
+.descript p{
+    color: var(--DarkGrayishBlue);
+    font-family: var(--fon1Serat);
+    font-size: 0.75rem;
+    padding: 0.85rem 0;
+    font-weight: 500;
+    line-height: 1.2rem;
+    opacity: 0.8;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+.promoPrice{
+    color: var(--DarkCyan);
+    font-family: var(--fon2Fraunces);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.priceTag{
+    color: var(--DarkGrayishBlue);
+    font-family: var(--fon1Serat);
+    font-size: 0.7rem;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+button{
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--DarkCyan);
+    color: var(--White);
+    font-family: var(--fon1Serat);
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button span{
+    margin-right: 0.4rem;
+}
+
+button:hover{
+    background-color: hsl(145, 71%, 13%);
+}
+
+.addBtn:hover .desc{
+
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.2rem;
+    opacity: 0.8;
+}
+
+
+@media screen and (max-width: 530px) {
+
+    main{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 0 30px;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .image{
+        width: 100%;
+        min-height: 40vh;
+        background-image: url(./product-preview-card-component-main/images/image-product-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .text{
+        width: fit-content;
+        min-height: auto;
+    }
+}
