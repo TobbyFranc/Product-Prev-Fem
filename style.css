@@ -26,6 +26,7 @@
   display: grid;
   place-content: center;
   min-height: 100vh;
+  /* grid-template-columns: 1fr 1fr; */
 }
 
 main {
@@ -143,11 +144,9 @@ button:hover {
   }
 
   .image {
-    width: 100%;
-    min-height: 40vh;
+    max-width: 100%;
+    min-height: 35vh;
     background-image: url(./product-preview-card-component-main/images/image-product-mobile.jpg);
-    background-size: cover;
-    background-position: center;
   }
 
   .text {
